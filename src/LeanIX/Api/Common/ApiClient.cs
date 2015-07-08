@@ -118,6 +118,7 @@ namespace LeanIX.Api.Common {
 					case "POST":
 					case "PUT":
 					case "DELETE":
+                        client.Method = method;
 						var swRequestWriter = new StreamWriter(client.GetRequestStream());
 						swRequestWriter.Write(serialize(body));
 						swRequestWriter.Close();
