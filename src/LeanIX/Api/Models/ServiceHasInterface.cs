@@ -1,7 +1,7 @@
 /*
 * The MIT License (MIT)	 
 *
-* Copyright (c) 2014 LeanIX GmbH
+* Copyright (c) 2015 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -55,6 +55,21 @@ namespace LeanIX.Api.Models {
 		/*  */
 		public string reference { get; set; }
 
+		/*  */
+		public string visibilityID { get; set; }
+
+		/*  */
+		public string link { get; set; }
+
+		/*  */
+		public string ifaceID { get; set; }
+
+		/*  */
+		public InterfaceTechnology interfaceTechnology { get; set; }
+
+		/*  */
+		public List<BusinessObject> businessObjects { get; set; }
+
 		public override string ToString()  {
 			var sb = new StringBuilder();
 			sb.Append("class ServiceHasInterface {\n");
@@ -67,6 +82,11 @@ namespace LeanIX.Api.Models {
 			sb.Append("  interfaceTypeID: ").Append(interfaceTypeID).Append("\n");
 			sb.Append("  interfaceTechnologyID: ").Append(interfaceTechnologyID).Append("\n");
 			sb.Append("  reference: ").Append(reference).Append("\n");
+			sb.Append("  visibilityID: ").Append(visibilityID).Append("\n");
+			sb.Append("  link: ").Append(link).Append("\n");
+			sb.Append("  ifaceID: ").Append(ifaceID).Append("\n");
+			sb.Append("  interfaceTechnology: ").Append(interfaceTechnology).Append("\n");
+			sb.Append("  businessObjects: ").Append(businessObjects).Append("\n");
 			sb.Append("}\n");
 			return sb.ToString();
 		}

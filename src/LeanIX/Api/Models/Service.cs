@@ -1,7 +1,7 @@
 /*
 * The MIT License (MIT)	 
 *
-* Copyright (c) 2014 LeanIX GmbH
+* Copyright (c) 2015 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -30,6 +30,15 @@ namespace LeanIX.Api.Models {
 	public class Service {
 		/*  */
 		public string ID { get; set; }
+
+		/*  */
+		public string displayName { get; set; }
+
+		/*  */
+		public string parentID { get; set; }
+
+		/*  */
+		public long level { get; set; }
 
 		/*  */
 		public string release { get; set; }
@@ -65,7 +74,43 @@ namespace LeanIX.Api.Models {
 		public string technicalSuitabilityDescription { get; set; }
 
 		/*  */
-		public List<ServiceHasProject> serviceHasProjects { get; set; }
+		public string objectStatusID { get; set; }
+
+		/*  */
+		public List<string> tags { get; set; }
+
+		/*  */
+		public string fullName { get; set; }
+
+		/*  */
+		public string resourceType { get; set; }
+
+		/*  */
+		public List<FactSheetHasParent> factSheetHasParents { get; set; }
+
+		/*  */
+		public List<FactSheetHasChild> factSheetHasChildren { get; set; }
+
+		/*  */
+		public List<FactSheetHasDocument> factSheetHasDocuments { get; set; }
+
+		/*  */
+		public List<FactSheetHasLifecycle> factSheetHasLifecycles { get; set; }
+
+		/*  */
+		public List<UserSubscription> userSubscriptions { get; set; }
+
+		/*  */
+		public List<FactSheetHasPredecessor> factSheetHasPredecessors { get; set; }
+
+		/*  */
+		public List<FactSheetHasSuccessor> factSheetHasSuccessors { get; set; }
+
+		/*  */
+		public List<FactSheetHasRequires> factSheetHasRequires { get; set; }
+
+		/*  */
+		public List<FactSheetHasRequiredby> factSheetHasRequiredby { get; set; }
 
 		/*  */
 		public List<ServiceHasBusinessCapability> serviceHasBusinessCapabilities { get; set; }
@@ -83,18 +128,24 @@ namespace LeanIX.Api.Models {
 		public List<ServiceHasInterface> serviceHasInterfaces { get; set; }
 
 		/*  */
-		public List<ServiceHasResourceSvc> serviceHasResourcesSvc { get; set; }
+		public List<ServiceHasProject> serviceHasProjects { get; set; }
 
 		/*  */
-		public List<ServiceHasResourceSW> serviceHasResourcesSW { get; set; }
+		public List<ServiceHasResource> serviceHasResources { get; set; }
 
 		/*  */
-		public List<ServiceHasResourceHW> serviceHasResourcesHW { get; set; }
+		public List<FactSheetHasIfaceProvider> factSheetHasIfaceProviders { get; set; }
+
+		/*  */
+		public List<FactSheetHasIfaceConsumer> factSheetHasIfaceConsumers { get; set; }
 
 		public override string ToString()  {
 			var sb = new StringBuilder();
 			sb.Append("class Service {\n");
 			sb.Append("  ID: ").Append(ID).Append("\n");
+			sb.Append("  displayName: ").Append(displayName).Append("\n");
+			sb.Append("  parentID: ").Append(parentID).Append("\n");
+			sb.Append("  level: ").Append(level).Append("\n");
 			sb.Append("  release: ").Append(release).Append("\n");
 			sb.Append("  name: ").Append(name).Append("\n");
 			sb.Append("  reference: ").Append(reference).Append("\n");
@@ -106,15 +157,28 @@ namespace LeanIX.Api.Models {
 			sb.Append("  functionalSuitabilityDescription: ").Append(functionalSuitabilityDescription).Append("\n");
 			sb.Append("  technicalSuitabilityID: ").Append(technicalSuitabilityID).Append("\n");
 			sb.Append("  technicalSuitabilityDescription: ").Append(technicalSuitabilityDescription).Append("\n");
-			sb.Append("  serviceHasProjects: ").Append(serviceHasProjects).Append("\n");
+			sb.Append("  objectStatusID: ").Append(objectStatusID).Append("\n");
+			sb.Append("  tags: ").Append(tags).Append("\n");
+			sb.Append("  fullName: ").Append(fullName).Append("\n");
+			sb.Append("  resourceType: ").Append(resourceType).Append("\n");
+			sb.Append("  factSheetHasParents: ").Append(factSheetHasParents).Append("\n");
+			sb.Append("  factSheetHasChildren: ").Append(factSheetHasChildren).Append("\n");
+			sb.Append("  factSheetHasDocuments: ").Append(factSheetHasDocuments).Append("\n");
+			sb.Append("  factSheetHasLifecycles: ").Append(factSheetHasLifecycles).Append("\n");
+			sb.Append("  userSubscriptions: ").Append(userSubscriptions).Append("\n");
+			sb.Append("  factSheetHasPredecessors: ").Append(factSheetHasPredecessors).Append("\n");
+			sb.Append("  factSheetHasSuccessors: ").Append(factSheetHasSuccessors).Append("\n");
+			sb.Append("  factSheetHasRequires: ").Append(factSheetHasRequires).Append("\n");
+			sb.Append("  factSheetHasRequiredby: ").Append(factSheetHasRequiredby).Append("\n");
 			sb.Append("  serviceHasBusinessCapabilities: ").Append(serviceHasBusinessCapabilities).Append("\n");
 			sb.Append("  serviceHasProcesses: ").Append(serviceHasProcesses).Append("\n");
 			sb.Append("  serviceHasConsumers: ").Append(serviceHasConsumers).Append("\n");
 			sb.Append("  serviceHasBusinessObjects: ").Append(serviceHasBusinessObjects).Append("\n");
 			sb.Append("  serviceHasInterfaces: ").Append(serviceHasInterfaces).Append("\n");
-			sb.Append("  serviceHasResourcesSvc: ").Append(serviceHasResourcesSvc).Append("\n");
-			sb.Append("  serviceHasResourcesSW: ").Append(serviceHasResourcesSW).Append("\n");
-			sb.Append("  serviceHasResourcesHW: ").Append(serviceHasResourcesHW).Append("\n");
+			sb.Append("  serviceHasProjects: ").Append(serviceHasProjects).Append("\n");
+			sb.Append("  serviceHasResources: ").Append(serviceHasResources).Append("\n");
+			sb.Append("  factSheetHasIfaceProviders: ").Append(factSheetHasIfaceProviders).Append("\n");
+			sb.Append("  factSheetHasIfaceConsumers: ").Append(factSheetHasIfaceConsumers).Append("\n");
 			sb.Append("}\n");
 			return sb.ToString();
 		}
