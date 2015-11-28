@@ -41,6 +41,9 @@ namespace LeanIX.Api.Models {
 		public long level { get; set; }
 
 		/*  */
+		public string release { get; set; }
+
+		/*  */
 		public string name { get; set; }
 
 		/*  */
@@ -119,6 +122,7 @@ namespace LeanIX.Api.Models {
 			sb.Append("  displayName: ").Append(displayName).Append("\n");
 			sb.Append("  parentID: ").Append(parentID).Append("\n");
 			sb.Append("  level: ").Append(level).Append("\n");
+			sb.Append("  release: ").Append(release).Append("\n");
 			sb.Append("  name: ").Append(name).Append("\n");
 			sb.Append("  reference: ").Append(reference).Append("\n");
 			sb.Append("  alias: ").Append(alias).Append("\n");
