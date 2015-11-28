@@ -1480,7 +1480,7 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<FactSheetHasRequires> getFactSheetHasRequires (string ID) {
+		public List<FactSheetHasRequires> getFactSheetHasRequiresAll (string ID) {
 			// create path and map variables
 			var path = "/businessObjects/{ID}/factSheetHasRequires".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
@@ -1660,7 +1660,7 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<FactSheetHasRequiredby> getFactSheetHasRequiredby (string ID) {
+		public List<FactSheetHasRequiredby> getFactSheetHasRequiredByAll (string ID) {
 			// create path and map variables
 			var path = "/businessObjects/{ID}/factSheetHasRequiredby".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
