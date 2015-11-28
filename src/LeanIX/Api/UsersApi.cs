@@ -1,7 +1,7 @@
 /*
 * The MIT License (MIT)	 
 *
-* Copyright (c) 2014 LeanIX GmbH
+* Copyright (c) 2015 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -71,8 +71,8 @@ namespace LeanIX.Api {
 		/// <summary>
 		/// Read a User by a given ID 
 		/// </summary>
-		/// <param name="ID">Unique ID of the Tech. Stack</param>
-		/// <param name="relations">If set to true, all relations of the Fact Sheet are fetched as well. Fetching all relations can be slower. Default: false.</param>
+		/// <param name="ID">ID or uuid of the user, e.g. 110000002 or fa9b83f0-c015-4ede-ae22-3723f58314a9</param>
+		/// <param name="relations">If set to true, all relations of the User are fetched as well. Fetching all relations can be slower. Default: false.</param>
 		/// <returns></returns>
 		public User getUser (string ID, bool relations) {
 			// create path and map variables
@@ -95,77 +95,6 @@ namespace LeanIX.Api {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
 					return (User) ApiClient.deserialize(response, typeof(User));
-				}
-				else {
-					return null;
-				}
-			} catch (ApiException ex) {
-				if(ex.ErrorCode == 404) {
-					return null;
-				}
-				else {
-					throw ex;
-				}
-			}
-		}
-		/// <summary>
-		/// Read all of relation 
-		/// </summary>
-		/// <param name="ID">Unique ID of the Tech. Stack</param>
-		/// <returns></returns>
-		public List<UserSubscription> getUserSubscriptions (string ID) {
-			// create path and map variables
-			var path = "/users/{ID}/userSubscriptions".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
-
-			// query params
-			var queryParams = new Dictionary<String, String>();
-			var headerParams = new Dictionary<String, String>();
-
-			// verify required params are set
-			if (ID == null ) {
-				throw new ApiException(400, "missing required params");
-			}
-			string paramStr = null;
-			try {
-				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
-				if(response != null){
-					return (List<UserSubscription>) ApiClient.deserialize(response, typeof(List<UserSubscription>));
-				}
-				else {
-					return null;
-				}
-			} catch (ApiException ex) {
-				if(ex.ErrorCode == 404) {
-					return null;
-				}
-				else {
-					throw ex;
-				}
-			}
-		}
-		/// <summary>
-		/// Read by relationID 
-		/// </summary>
-		/// <param name="ID">Unique ID of the Tech. Stack</param>
-		/// <param name="relationID">Unique ID of the Relation</param>
-		/// <returns></returns>
-		public UserSubscription getUserSubscription (string ID, string relationID) {
-			// create path and map variables
-			var path = "/users/{ID}/userSubscription/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
-
-			// query params
-			var queryParams = new Dictionary<String, String>();
-			var headerParams = new Dictionary<String, String>();
-
-			// verify required params are set
-			if (ID == null || relationID == null ) {
-				throw new ApiException(400, "missing required params");
-			}
-			string paramStr = null;
-			try {
-				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
-				if(response != null){
-					return (UserSubscription) ApiClient.deserialize(response, typeof(UserSubscription));
 				}
 				else {
 					return null;

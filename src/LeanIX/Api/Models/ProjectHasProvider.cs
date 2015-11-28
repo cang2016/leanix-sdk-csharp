@@ -1,7 +1,7 @@
 /*
 * The MIT License (MIT)	 
 *
-* Copyright (c) 2014 LeanIX GmbH
+* Copyright (c) 2015 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -38,34 +38,13 @@ namespace LeanIX.Api.Models {
 		public string projectID { get; set; }
 
 		/*  */
-		public string orderNo { get; set; }
-
-		/*  */
 		public double orderedOpex { get; set; }
 
 		/*  */
 		public double orderedCapex { get; set; }
 
 		/*  */
-		public string comment { get; set; }
-
-		/*  */
-		public double actualsOpex { get; set; }
-
-		/*  */
-		public double actualsCapex { get; set; }
-
-		/*  */
-		public double etcOpex { get; set; }
-
-		/*  */
-		public double etcCapex { get; set; }
-
-		/*  */
-		public double deltaOpex { get; set; }
-
-		/*  */
-		public double deltaCapex { get; set; }
+		public string orderNo { get; set; }
 
 		public override string ToString()  {
 			var sb = new StringBuilder();
@@ -73,16 +52,9 @@ namespace LeanIX.Api.Models {
 			sb.Append("  ID: ").Append(ID).Append("\n");
 			sb.Append("  providerID: ").Append(providerID).Append("\n");
 			sb.Append("  projectID: ").Append(projectID).Append("\n");
-			sb.Append("  orderNo: ").Append(orderNo).Append("\n");
 			sb.Append("  orderedOpex: ").Append(orderedOpex).Append("\n");
 			sb.Append("  orderedCapex: ").Append(orderedCapex).Append("\n");
-			sb.Append("  comment: ").Append(comment).Append("\n");
-			sb.Append("  actualsOpex: ").Append(actualsOpex).Append("\n");
-			sb.Append("  actualsCapex: ").Append(actualsCapex).Append("\n");
-			sb.Append("  etcOpex: ").Append(etcOpex).Append("\n");
-			sb.Append("  etcCapex: ").Append(etcCapex).Append("\n");
-			sb.Append("  deltaOpex: ").Append(deltaOpex).Append("\n");
-			sb.Append("  deltaCapex: ").Append(deltaCapex).Append("\n");
+			sb.Append("  orderNo: ").Append(orderNo).Append("\n");
 			sb.Append("}\n");
 			return sb.ToString();
 		}

@@ -1,7 +1,7 @@
 /*
 * The MIT License (MIT)	 
 *
-* Copyright (c) 2014 LeanIX GmbH
+* Copyright (c) 2015 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -32,6 +32,9 @@ namespace LeanIX.Api.Models {
 		public string ID { get; set; }
 
 		/*  */
+		public string uuid { get; set; }
+
+		/*  */
 		public string firstName { get; set; }
 
 		/*  */
@@ -50,6 +53,7 @@ namespace LeanIX.Api.Models {
 			var sb = new StringBuilder();
 			sb.Append("class User {\n");
 			sb.Append("  ID: ").Append(ID).Append("\n");
+			sb.Append("  uuid: ").Append(uuid).Append("\n");
 			sb.Append("  firstName: ").Append(firstName).Append("\n");
 			sb.Append("  lastName: ").Append(lastName).Append("\n");
 			sb.Append("  email: ").Append(email).Append("\n");

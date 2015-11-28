@@ -1,7 +1,7 @@
 /*
 * The MIT License (MIT)	 
 *
-* Copyright (c) 2014 LeanIX GmbH
+* Copyright (c) 2015 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -46,6 +46,12 @@ namespace LeanIX.Api.Models {
 		/*  */
 		public string comment { get; set; }
 
+		/*  */
+		public string supportTypeID { get; set; }
+
+		/*  */
+		public string constraints { get; set; }
+
 		public override string ToString()  {
 			var sb = new StringBuilder();
 			sb.Append("class ServiceHasBusinessCapability {\n");
@@ -55,6 +61,8 @@ namespace LeanIX.Api.Models {
 			sb.Append("  isLeading: ").Append(isLeading).Append("\n");
 			sb.Append("  functionalSuitabilityID: ").Append(functionalSuitabilityID).Append("\n");
 			sb.Append("  comment: ").Append(comment).Append("\n");
+			sb.Append("  supportTypeID: ").Append(supportTypeID).Append("\n");
+			sb.Append("  constraints: ").Append(constraints).Append("\n");
 			sb.Append("}\n");
 			return sb.ToString();
 		}

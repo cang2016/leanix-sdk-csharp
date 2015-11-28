@@ -1,7 +1,7 @@
 /*
 * The MIT License (MIT)	 
 *
-* Copyright (c) 2014 LeanIX GmbH
+* Copyright (c) 2015 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -220,9 +220,9 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<ResourceHasProviderSvc> getResourceHasProvidersSvc (string ID) {
+		public List<FactSheetHasParent> getFactSheetHasParents (string ID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSvc".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/factSheetHasParents".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -236,7 +236,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (List<ResourceHasProviderSvc>) ApiClient.deserialize(response, typeof(List<ResourceHasProviderSvc>));
+					return (List<FactSheetHasParent>) ApiClient.deserialize(response, typeof(List<FactSheetHasParent>));
 				}
 				else {
 					return null;
@@ -256,9 +256,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasProviderSvc createResourceHasProviderSvc (string ID, Resource body) {
+		public FactSheetHasParent createFactSheetHasParent (string ID, FactSheetHasParent body) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSvc".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/factSheetHasParents".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -272,7 +272,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
 				if(response != null){
-					return (ResourceHasProviderSvc) ApiClient.deserialize(response, typeof(ResourceHasProviderSvc));
+					return (FactSheetHasParent) ApiClient.deserialize(response, typeof(FactSheetHasParent));
 				}
 				else {
 					return null;
@@ -292,9 +292,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public ResourceHasProviderSvc getResourceHasProviderSvc (string ID, string relationID) {
+		public FactSheetHasParent getFactSheetHasParent (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasParents/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -308,7 +308,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (ResourceHasProviderSvc) ApiClient.deserialize(response, typeof(ResourceHasProviderSvc));
+					return (FactSheetHasParent) ApiClient.deserialize(response, typeof(FactSheetHasParent));
 				}
 				else {
 					return null;
@@ -329,9 +329,9 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasProviderSvc updateResourceHasProviderSvc (string ID, string relationID, Resource body) {
+		public FactSheetHasParent updateFactSheetHasParent (string ID, string relationID, FactSheetHasParent body) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasParents/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -345,7 +345,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
 				if(response != null){
-					return (ResourceHasProviderSvc) ApiClient.deserialize(response, typeof(ResourceHasProviderSvc));
+					return (FactSheetHasParent) ApiClient.deserialize(response, typeof(FactSheetHasParent));
 				}
 				else {
 					return null;
@@ -365,9 +365,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public void deleteResourceHasProviderSvc (string ID, string relationID) {
+		public void deleteFactSheetHasParent (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasParents/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -400,9 +400,9 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<ResourceHasProviderSW> getResourceHasProvidersSW (string ID) {
+		public List<FactSheetHasChild> getFactSheetHasChildren (string ID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/factSheetHasChildren".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -416,7 +416,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (List<ResourceHasProviderSW>) ApiClient.deserialize(response, typeof(List<ResourceHasProviderSW>));
+					return (List<FactSheetHasChild>) ApiClient.deserialize(response, typeof(List<FactSheetHasChild>));
 				}
 				else {
 					return null;
@@ -436,9 +436,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasProviderSW createResourceHasProviderSW (string ID, Resource body) {
+		public FactSheetHasChild createFactSheetHasChild (string ID, FactSheetHasChild body) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/factSheetHasChildren".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -452,7 +452,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
 				if(response != null){
-					return (ResourceHasProviderSW) ApiClient.deserialize(response, typeof(ResourceHasProviderSW));
+					return (FactSheetHasChild) ApiClient.deserialize(response, typeof(FactSheetHasChild));
 				}
 				else {
 					return null;
@@ -472,9 +472,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public ResourceHasProviderSW getResourceHasProviderSW (string ID, string relationID) {
+		public FactSheetHasChild getFactSheetHasChild (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasChildren/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -488,7 +488,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (ResourceHasProviderSW) ApiClient.deserialize(response, typeof(ResourceHasProviderSW));
+					return (FactSheetHasChild) ApiClient.deserialize(response, typeof(FactSheetHasChild));
 				}
 				else {
 					return null;
@@ -509,9 +509,9 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasProviderSW updateResourceHasProviderSW (string ID, string relationID, Resource body) {
+		public FactSheetHasChild updateFactSheetHasChild (string ID, string relationID, FactSheetHasChild body) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasChildren/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -525,7 +525,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
 				if(response != null){
-					return (ResourceHasProviderSW) ApiClient.deserialize(response, typeof(ResourceHasProviderSW));
+					return (FactSheetHasChild) ApiClient.deserialize(response, typeof(FactSheetHasChild));
 				}
 				else {
 					return null;
@@ -545,9 +545,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public void deleteResourceHasProviderSW (string ID, string relationID) {
+		public void deleteFactSheetHasChild (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersSW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasChildren/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -580,9 +580,9 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<ResourceHasProviderHW> getResourceHasProvidersHW (string ID) {
+		public List<FactSheetHasDocument> getFactSheetHasDocuments (string ID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersHW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/factSheetHasDocuments".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -596,7 +596,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (List<ResourceHasProviderHW>) ApiClient.deserialize(response, typeof(List<ResourceHasProviderHW>));
+					return (List<FactSheetHasDocument>) ApiClient.deserialize(response, typeof(List<FactSheetHasDocument>));
 				}
 				else {
 					return null;
@@ -616,9 +616,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasProviderHW createResourceHasProviderHW (string ID, Resource body) {
+		public FactSheetHasDocument createFactSheetHasDocument (string ID, FactSheetHasDocument body) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersHW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/factSheetHasDocuments".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -632,7 +632,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
 				if(response != null){
-					return (ResourceHasProviderHW) ApiClient.deserialize(response, typeof(ResourceHasProviderHW));
+					return (FactSheetHasDocument) ApiClient.deserialize(response, typeof(FactSheetHasDocument));
 				}
 				else {
 					return null;
@@ -652,9 +652,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public ResourceHasProviderHW getResourceHasProviderHW (string ID, string relationID) {
+		public FactSheetHasDocument getFactSheetHasDocument (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersHW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasDocuments/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -668,7 +668,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (ResourceHasProviderHW) ApiClient.deserialize(response, typeof(ResourceHasProviderHW));
+					return (FactSheetHasDocument) ApiClient.deserialize(response, typeof(FactSheetHasDocument));
 				}
 				else {
 					return null;
@@ -689,9 +689,9 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasProviderHW updateResourceHasProviderHW (string ID, string relationID, Resource body) {
+		public FactSheetHasDocument updateFactSheetHasDocument (string ID, string relationID, FactSheetHasDocument body) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersHW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasDocuments/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -705,7 +705,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
 				if(response != null){
-					return (ResourceHasProviderHW) ApiClient.deserialize(response, typeof(ResourceHasProviderHW));
+					return (FactSheetHasDocument) ApiClient.deserialize(response, typeof(FactSheetHasDocument));
 				}
 				else {
 					return null;
@@ -725,9 +725,1269 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public void deleteResourceHasProviderHW (string ID, string relationID) {
+		public void deleteFactSheetHasDocument (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/resourceHasProvidersHW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/factSheetHasDocuments/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<FactSheetHasLifecycle> getFactSheetHasLifecycles (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasLifecycles".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<FactSheetHasLifecycle>) ApiClient.deserialize(response, typeof(List<FactSheetHasLifecycle>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasLifecycle createFactSheetHasLifecycle (string ID, FactSheetHasLifecycle body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasLifecycles".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasLifecycle) ApiClient.deserialize(response, typeof(FactSheetHasLifecycle));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public FactSheetHasLifecycle getFactSheetHasLifecycle (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasLifecycles/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (FactSheetHasLifecycle) ApiClient.deserialize(response, typeof(FactSheetHasLifecycle));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasLifecycle updateFactSheetHasLifecycle (string ID, string relationID, FactSheetHasLifecycle body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasLifecycles/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasLifecycle) ApiClient.deserialize(response, typeof(FactSheetHasLifecycle));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteFactSheetHasLifecycle (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasLifecycles/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<UserSubscription> getUserSubscriptions (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/userSubscriptions".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<UserSubscription>) ApiClient.deserialize(response, typeof(List<UserSubscription>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public UserSubscription createUserSubscription (string ID, UserSubscription body) {
+			// create path and map variables
+			var path = "/resources/{ID}/userSubscriptions".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (UserSubscription) ApiClient.deserialize(response, typeof(UserSubscription));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public UserSubscription getUserSubscription (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/userSubscriptions/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (UserSubscription) ApiClient.deserialize(response, typeof(UserSubscription));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public UserSubscription updateUserSubscription (string ID, string relationID, UserSubscription body) {
+			// create path and map variables
+			var path = "/resources/{ID}/userSubscriptions/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (UserSubscription) ApiClient.deserialize(response, typeof(UserSubscription));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteUserSubscription (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/userSubscriptions/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<FactSheetHasPredecessor> getFactSheetHasPredecessors (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasPredecessors".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<FactSheetHasPredecessor>) ApiClient.deserialize(response, typeof(List<FactSheetHasPredecessor>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasPredecessor createFactSheetHasPredecessor (string ID, FactSheetHasPredecessor body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasPredecessors".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasPredecessor) ApiClient.deserialize(response, typeof(FactSheetHasPredecessor));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public FactSheetHasPredecessor getFactSheetHasPredecessor (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasPredecessors/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (FactSheetHasPredecessor) ApiClient.deserialize(response, typeof(FactSheetHasPredecessor));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasPredecessor updateFactSheetHasPredecessor (string ID, string relationID, FactSheetHasPredecessor body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasPredecessors/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasPredecessor) ApiClient.deserialize(response, typeof(FactSheetHasPredecessor));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteFactSheetHasPredecessor (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasPredecessors/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<FactSheetHasSuccessor> getFactSheetHasSuccessors (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasSuccessors".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<FactSheetHasSuccessor>) ApiClient.deserialize(response, typeof(List<FactSheetHasSuccessor>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasSuccessor createFactSheetHasSuccessor (string ID, FactSheetHasSuccessor body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasSuccessors".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasSuccessor) ApiClient.deserialize(response, typeof(FactSheetHasSuccessor));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public FactSheetHasSuccessor getFactSheetHasSuccessor (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasSuccessors/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (FactSheetHasSuccessor) ApiClient.deserialize(response, typeof(FactSheetHasSuccessor));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasSuccessor updateFactSheetHasSuccessor (string ID, string relationID, FactSheetHasSuccessor body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasSuccessors/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasSuccessor) ApiClient.deserialize(response, typeof(FactSheetHasSuccessor));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteFactSheetHasSuccessor (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasSuccessors/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<FactSheetHasRequires> getFactSheetHasRequires (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequires".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<FactSheetHasRequires>) ApiClient.deserialize(response, typeof(List<FactSheetHasRequires>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasRequires createFactSheetHasRequires (string ID, FactSheetHasRequires body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequires".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasRequires) ApiClient.deserialize(response, typeof(FactSheetHasRequires));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public FactSheetHasRequires getFactSheetHasRequires (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequires/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (FactSheetHasRequires) ApiClient.deserialize(response, typeof(FactSheetHasRequires));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasRequires updateFactSheetHasRequires (string ID, string relationID, FactSheetHasRequires body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequires/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasRequires) ApiClient.deserialize(response, typeof(FactSheetHasRequires));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteFactSheetHasRequires (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequires/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<FactSheetHasRequiredby> getFactSheetHasRequiredby (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequiredby".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<FactSheetHasRequiredby>) ApiClient.deserialize(response, typeof(List<FactSheetHasRequiredby>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasRequiredby createFactSheetHasRequiredby (string ID, FactSheetHasRequiredby body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequiredby".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasRequiredby) ApiClient.deserialize(response, typeof(FactSheetHasRequiredby));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public FactSheetHasRequiredby getFactSheetHasRequiredby (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequiredby/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (FactSheetHasRequiredby) ApiClient.deserialize(response, typeof(FactSheetHasRequiredby));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public FactSheetHasRequiredby updateFactSheetHasRequiredby (string ID, string relationID, FactSheetHasRequiredby body) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequiredby/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (FactSheetHasRequiredby) ApiClient.deserialize(response, typeof(FactSheetHasRequiredby));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteFactSheetHasRequiredby (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/factSheetHasRequiredby/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<ResourceHasProvider> getResourceHasProviders (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/resourceHasProviders".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<ResourceHasProvider>) ApiClient.deserialize(response, typeof(List<ResourceHasProvider>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public ResourceHasProvider createResourceHasProvider (string ID, ResourceHasProvider body) {
+			// create path and map variables
+			var path = "/resources/{ID}/resourceHasProviders".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (ResourceHasProvider) ApiClient.deserialize(response, typeof(ResourceHasProvider));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public ResourceHasProvider getResourceHasProvider (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/resourceHasProviders/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (ResourceHasProvider) ApiClient.deserialize(response, typeof(ResourceHasProvider));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public ResourceHasProvider updateResourceHasProvider (string ID, string relationID, ResourceHasProvider body) {
+			// create path and map variables
+			var path = "/resources/{ID}/resourceHasProviders/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (ResourceHasProvider) ApiClient.deserialize(response, typeof(ResourceHasProvider));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteResourceHasProvider (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/resourceHasProviders/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -796,7 +2056,7 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasResourceCapability createResourceHasResourceCapability (string ID, Resource body) {
+		public ResourceHasResourceCapability createResourceHasResourceCapability (string ID, ResourceHasResourceCapability body) {
 			// create path and map variables
 			var path = "/resources/{ID}/resourceHasResourceCapabilities".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
@@ -869,7 +2129,7 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ResourceHasResourceCapability updateResourceHasResourceCapability (string ID, string relationID, Resource body) {
+		public ResourceHasResourceCapability updateResourceHasResourceCapability (string ID, string relationID, ResourceHasResourceCapability body) {
 			// create path and map variables
 			var path = "/resources/{ID}/resourceHasResourceCapabilities/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
@@ -940,9 +2200,9 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<ServiceHasResourceSvc> getServiceHasResourcesSvc (string ID) {
+		public List<ServiceHasResource> getServiceHasResources (string ID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSvc".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/serviceHasResources".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -956,7 +2216,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (List<ServiceHasResourceSvc>) ApiClient.deserialize(response, typeof(List<ServiceHasResourceSvc>));
+					return (List<ServiceHasResource>) ApiClient.deserialize(response, typeof(List<ServiceHasResource>));
 				}
 				else {
 					return null;
@@ -976,9 +2236,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceSvc createServiceHasResourceSvc (string ID, Resource body) {
+		public ServiceHasResource createServiceHasResource (string ID, ServiceHasResource body) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSvc".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/serviceHasResources".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -992,7 +2252,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSvc) ApiClient.deserialize(response, typeof(ServiceHasResourceSvc));
+					return (ServiceHasResource) ApiClient.deserialize(response, typeof(ServiceHasResource));
 				}
 				else {
 					return null;
@@ -1012,9 +2272,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public ServiceHasResourceSvc getServiceHasResourceSvc (string ID, string relationID) {
+		public ServiceHasResource getServiceHasResource (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/serviceHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1028,7 +2288,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSvc) ApiClient.deserialize(response, typeof(ServiceHasResourceSvc));
+					return (ServiceHasResource) ApiClient.deserialize(response, typeof(ServiceHasResource));
 				}
 				else {
 					return null;
@@ -1049,9 +2309,9 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceSvc updateServiceHasResourceSvc (string ID, string relationID, Resource body) {
+		public ServiceHasResource updateServiceHasResource (string ID, string relationID, ServiceHasResource body) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/serviceHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1065,7 +2325,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSvc) ApiClient.deserialize(response, typeof(ServiceHasResourceSvc));
+					return (ServiceHasResource) ApiClient.deserialize(response, typeof(ServiceHasResource));
 				}
 				else {
 					return null;
@@ -1085,9 +2345,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public void deleteServiceHasResourceSvc (string ID, string relationID) {
+		public void deleteServiceHasResource (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/serviceHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1120,9 +2380,9 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<ServiceHasResourceSW> getServiceHasResourcesSW (string ID) {
+		public List<ProjectHasResource> getProjectHasResources (string ID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/projectHasResources".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1136,7 +2396,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (List<ServiceHasResourceSW>) ApiClient.deserialize(response, typeof(List<ServiceHasResourceSW>));
+					return (List<ProjectHasResource>) ApiClient.deserialize(response, typeof(List<ProjectHasResource>));
 				}
 				else {
 					return null;
@@ -1156,9 +2416,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceSW createServiceHasResourceSW (string ID, Resource body) {
+		public ProjectHasResource createProjectHasResource (string ID, ProjectHasResource body) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/projectHasResources".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1172,7 +2432,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSW) ApiClient.deserialize(response, typeof(ServiceHasResourceSW));
+					return (ProjectHasResource) ApiClient.deserialize(response, typeof(ProjectHasResource));
 				}
 				else {
 					return null;
@@ -1192,9 +2452,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public ServiceHasResourceSW getServiceHasResourceSW (string ID, string relationID) {
+		public ProjectHasResource getProjectHasResource (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/projectHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1208,7 +2468,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSW) ApiClient.deserialize(response, typeof(ServiceHasResourceSW));
+					return (ProjectHasResource) ApiClient.deserialize(response, typeof(ProjectHasResource));
 				}
 				else {
 					return null;
@@ -1229,9 +2489,9 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceSW updateServiceHasResourceSW (string ID, string relationID, Resource body) {
+		public ProjectHasResource updateProjectHasResource (string ID, string relationID, ProjectHasResource body) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/projectHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1245,7 +2505,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSW) ApiClient.deserialize(response, typeof(ServiceHasResourceSW));
+					return (ProjectHasResource) ApiClient.deserialize(response, typeof(ProjectHasResource));
 				}
 				else {
 					return null;
@@ -1265,9 +2525,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public void deleteServiceHasResourceSW (string ID, string relationID) {
+		public void deleteProjectHasResource (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesSW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/projectHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1300,9 +2560,9 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<ServiceHasResourceHW> getServiceHasResourcesHW (string ID) {
+		public List<ResourceHasConsumer> getResourceHasConsumers (string ID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesHW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/resourceHasConsumers".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1316,7 +2576,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (List<ServiceHasResourceHW>) ApiClient.deserialize(response, typeof(List<ServiceHasResourceHW>));
+					return (List<ResourceHasConsumer>) ApiClient.deserialize(response, typeof(List<ResourceHasConsumer>));
 				}
 				else {
 					return null;
@@ -1336,9 +2596,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceHW createServiceHasResourceHW (string ID, Resource body) {
+		public ResourceHasConsumer createResourceHasConsumer (string ID, ResourceHasConsumer body) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesHW".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+			var path = "/resources/{ID}/resourceHasConsumers".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1352,7 +2612,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceHW) ApiClient.deserialize(response, typeof(ServiceHasResourceHW));
+					return (ResourceHasConsumer) ApiClient.deserialize(response, typeof(ResourceHasConsumer));
 				}
 				else {
 					return null;
@@ -1372,9 +2632,9 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public ServiceHasResourceHW getServiceHasResourceHW (string ID, string relationID) {
+		public ResourceHasConsumer getResourceHasConsumer (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesHW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/resourceHasConsumers/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1388,7 +2648,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (ServiceHasResourceHW) ApiClient.deserialize(response, typeof(ServiceHasResourceHW));
+					return (ResourceHasConsumer) ApiClient.deserialize(response, typeof(ResourceHasConsumer));
 				}
 				else {
 					return null;
@@ -1409,9 +2669,9 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceHW updateServiceHasResourceHW (string ID, string relationID, Resource body) {
+		public ResourceHasConsumer updateResourceHasConsumer (string ID, string relationID, ResourceHasConsumer body) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesHW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/resourceHasConsumers/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
@@ -1425,7 +2685,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceHW) ApiClient.deserialize(response, typeof(ServiceHasResourceHW));
+					return (ResourceHasConsumer) ApiClient.deserialize(response, typeof(ResourceHasConsumer));
 				}
 				else {
 					return null;
@@ -1445,9 +2705,189 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public void deleteServiceHasResourceHW (string ID, string relationID) {
+		public void deleteResourceHasConsumer (string ID, string relationID) {
 			// create path and map variables
-			var path = "/resources/{ID}/serviceHasResourcesHW/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+			var path = "/resources/{ID}/resourceHasConsumers/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "DELETE", queryParams, null, headerParams);
+				if(response != null){
+					return ;
+				}
+				else {
+					return ;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return ;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read all of relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <returns></returns>
+		public List<IfaceHasResource> getIfaceHasResources (string ID) {
+			// create path and map variables
+			var path = "/resources/{ID}/ifaceHasResources".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (List<IfaceHasResource>) ApiClient.deserialize(response, typeof(List<IfaceHasResource>));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Create a new relation 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public IfaceHasResource createIfaceHasResource (string ID, IfaceHasResource body) {
+			// create path and map variables
+			var path = "/resources/{ID}/ifaceHasResources".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+				if(response != null){
+					return (IfaceHasResource) ApiClient.deserialize(response, typeof(IfaceHasResource));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Read by relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public IfaceHasResource getIfaceHasResource (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/ifaceHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
+				if(response != null){
+					return (IfaceHasResource) ApiClient.deserialize(response, typeof(IfaceHasResource));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Update relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <param name="body">Message-Body</param>
+		/// <returns></returns>
+		public IfaceHasResource updateIfaceHasResource (string ID, string relationID, IfaceHasResource body) {
+			// create path and map variables
+			var path = "/resources/{ID}/ifaceHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
+
+			// query params
+			var queryParams = new Dictionary<String, String>();
+			var headerParams = new Dictionary<String, String>();
+
+			// verify required params are set
+			if (ID == null || relationID == null ) {
+				throw new ApiException(400, "missing required params");
+			}
+			string paramStr = null;
+			try {
+				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
+				if(response != null){
+					return (IfaceHasResource) ApiClient.deserialize(response, typeof(IfaceHasResource));
+				}
+				else {
+					return null;
+				}
+			} catch (ApiException ex) {
+				if(ex.ErrorCode == 404) {
+					return null;
+				}
+				else {
+					throw ex;
+				}
+			}
+		}
+		/// <summary>
+		/// Delete relation by a given relationID 
+		/// </summary>
+		/// <param name="ID">Unique ID</param>
+		/// <param name="relationID">Unique ID of the Relation</param>
+		/// <returns></returns>
+		public void deleteIfaceHasResource (string ID, string relationID) {
+			// create path and map variables
+			var path = "/resources/{ID}/ifaceHasResources/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
 			// query params
 			var queryParams = new Dictionary<String, String>();
