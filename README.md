@@ -46,6 +46,7 @@ You can then use the API class to execute functions. For each Fact Sheet in lean
 
 In order to update the SDK, you need to have maven installed, you can then run the following command in the root of the project:
 
+	cd codegen
 	mvn package
 
 # Thank You

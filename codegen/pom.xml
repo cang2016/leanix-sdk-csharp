@@ -83,7 +83,7 @@
 								<phase>package</phase>
 								<configuration>
 									<target>
-										<copy todir="src">
+										<copy todir="../src">
 											<fileset dir="target/generated-sources/swagger/src" includes="**" /> 	
 										</copy>
 									</target>
@@ -132,7 +132,7 @@
 		<maven-antrun-plugin-version>1.7</maven-antrun-plugin-version>
 		<scala-lang-version>2.9.1-1</scala-lang-version>
 		<swagger-codegen-version>2.0.13</swagger-codegen-version>
-		<leanix-rest-api-url>https://local-eam.leanix.net/demo/api/v1</leanix-rest-api-url>
+		<leanix-rest-api-url>https://test-app.leanix.net/demo/api/v1</leanix-rest-api-url>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
