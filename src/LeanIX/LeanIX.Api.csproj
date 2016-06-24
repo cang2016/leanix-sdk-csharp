@@ -80,6 +80,7 @@
     <Compile Include="Api\Models\ProcessHasBusinessCapability.cs" />
     <Compile Include="Api\Models\Project.cs" />
     <Compile Include="Api\Models\ProjectHasBusinessCapability.cs" />
+    <Compile Include="Api\Models\ProjectHasConsumer.cs" />
     <Compile Include="Api\Models\ProjectHasProvider.cs" />
     <Compile Include="Api\Models\ProjectHasResource.cs" />
     <Compile Include="Api\Models\ProjectUpdate.cs" />

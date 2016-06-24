@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -27,40 +27,40 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class User {
-		/*  */
-		public string ID { get; set; }
+  public class User {
+    /*  */
+    public string ID { get; set; }
 
-		/*  */
-		public string uuid { get; set; }
+    /*  */
+    public string uuid { get; set; }
 
-		/*  */
-		public string firstName { get; set; }
+    /*  */
+    public string firstName { get; set; }
 
-		/*  */
-		public string lastName { get; set; }
+    /*  */
+    public string lastName { get; set; }
 
-		/*  */
-		public string email { get; set; }
+    /*  */
+    public string email { get; set; }
 
-		/*  */
-		public string userStatusID { get; set; }
+    /*  */
+    public string userStatusID { get; set; }
 
-		/*  */
-		public List<UserSubscription> userSubscriptions { get; set; }
+    /*  */
+    public List<UserSubscription> userSubscriptions { get; set; }
 
-		public override string ToString()  {
-			var sb = new StringBuilder();
-			sb.Append("class User {\n");
-			sb.Append("  ID: ").Append(ID).Append("\n");
-			sb.Append("  uuid: ").Append(uuid).Append("\n");
-			sb.Append("  firstName: ").Append(firstName).Append("\n");
-			sb.Append("  lastName: ").Append(lastName).Append("\n");
-			sb.Append("  email: ").Append(email).Append("\n");
-			sb.Append("  userStatusID: ").Append(userStatusID).Append("\n");
-			sb.Append("  userSubscriptions: ").Append(userSubscriptions).Append("\n");
-			sb.Append("}\n");
-			return sb.ToString();
-		}
-	}
-	}
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class User {\n");
+      sb.Append("  ID: ").Append(ID).Append("\n");
+      sb.Append("  uuid: ").Append(uuid).Append("\n");
+      sb.Append("  firstName: ").Append(firstName).Append("\n");
+      sb.Append("  lastName: ").Append(lastName).Append("\n");
+      sb.Append("  email: ").Append(email).Append("\n");
+      sb.Append("  userStatusID: ").Append(userStatusID).Append("\n");
+      sb.Append("  userSubscriptions: ").Append(userSubscriptions).Append("\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+  }
+  }

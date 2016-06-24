@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -27,60 +27,60 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class Document {
-		/*  */
-		public string ID { get; set; }
+  public class Document {
+    /*  */
+    public string ID { get; set; }
 
-		/*  */
-		public string name { get; set; }
+    /*  */
+    public string name { get; set; }
 
-		/*  */
-		public string url { get; set; }
+    /*  */
+    public string url { get; set; }
 
-		/*  */
-		public string topic { get; set; }
+    /*  */
+    public string topic { get; set; }
 
-		/*  */
-		public string version { get; set; }
+    /*  */
+    public string version { get; set; }
 
-		/*  */
-		public string documentTypeID { get; set; }
+    /*  */
+    public string documentTypeID { get; set; }
 
-		/*  */
-		public string referenceSystem { get; set; }
+    /*  */
+    public string referenceSystem { get; set; }
 
-		/*  */
-		public string referenceType { get; set; }
+    /*  */
+    public string referenceType { get; set; }
 
-		/*  */
-		public string referenceID { get; set; }
+    /*  */
+    public string referenceID { get; set; }
 
-		/*  */
-		public string referenceSyncTime { get; set; }
+    /*  */
+    public string referenceSyncTime { get; set; }
 
-		/*  */
-		public string description { get; set; }
+    /*  */
+    public string description { get; set; }
 
-		/*  */
-		public List<FactSheetHasDocument> factSheetHasDocuments { get; set; }
+    /*  */
+    public List<FactSheetHasDocument> factSheetHasDocuments { get; set; }
 
-		public override string ToString()  {
-			var sb = new StringBuilder();
-			sb.Append("class Document {\n");
-			sb.Append("  ID: ").Append(ID).Append("\n");
-			sb.Append("  name: ").Append(name).Append("\n");
-			sb.Append("  url: ").Append(url).Append("\n");
-			sb.Append("  topic: ").Append(topic).Append("\n");
-			sb.Append("  version: ").Append(version).Append("\n");
-			sb.Append("  documentTypeID: ").Append(documentTypeID).Append("\n");
-			sb.Append("  referenceSystem: ").Append(referenceSystem).Append("\n");
-			sb.Append("  referenceType: ").Append(referenceType).Append("\n");
-			sb.Append("  referenceID: ").Append(referenceID).Append("\n");
-			sb.Append("  referenceSyncTime: ").Append(referenceSyncTime).Append("\n");
-			sb.Append("  description: ").Append(description).Append("\n");
-			sb.Append("  factSheetHasDocuments: ").Append(factSheetHasDocuments).Append("\n");
-			sb.Append("}\n");
-			return sb.ToString();
-		}
-	}
-	}
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class Document {\n");
+      sb.Append("  ID: ").Append(ID).Append("\n");
+      sb.Append("  name: ").Append(name).Append("\n");
+      sb.Append("  url: ").Append(url).Append("\n");
+      sb.Append("  topic: ").Append(topic).Append("\n");
+      sb.Append("  version: ").Append(version).Append("\n");
+      sb.Append("  documentTypeID: ").Append(documentTypeID).Append("\n");
+      sb.Append("  referenceSystem: ").Append(referenceSystem).Append("\n");
+      sb.Append("  referenceType: ").Append(referenceType).Append("\n");
+      sb.Append("  referenceID: ").Append(referenceID).Append("\n");
+      sb.Append("  referenceSyncTime: ").Append(referenceSyncTime).Append("\n");
+      sb.Append("  description: ").Append(description).Append("\n");
+      sb.Append("  factSheetHasDocuments: ").Append(factSheetHasDocuments).Append("\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+  }
+  }

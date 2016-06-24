@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -27,24 +27,24 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class ActivityStream {
-		/*  */
-		public DateTime update { get; set; }
+  public class ActivityStream {
+    /*  */
+    public DateTime update { get; set; }
 
-		/*  */
-		public long count { get; set; }
+    /*  */
+    public long count { get; set; }
 
-		/*  */
-		public List<Activity> data { get; set; }
+    /*  */
+    public List<Activity> data { get; set; }
 
-		public override string ToString()  {
-			var sb = new StringBuilder();
-			sb.Append("class ActivityStream {\n");
-			sb.Append("  update: ").Append(update).Append("\n");
-			sb.Append("  count: ").Append(count).Append("\n");
-			sb.Append("  data: ").Append(data).Append("\n");
-			sb.Append("}\n");
-			return sb.ToString();
-		}
-	}
-	}
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class ActivityStream {\n");
+      sb.Append("  update: ").Append(update).Append("\n");
+      sb.Append("  count: ").Append(count).Append("\n");
+      sb.Append("  data: ").Append(data).Append("\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+  }
+  }

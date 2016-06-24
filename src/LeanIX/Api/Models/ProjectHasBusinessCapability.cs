@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -27,36 +27,36 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class ProjectHasBusinessCapability {
-		/*  */
-		public string ID { get; set; }
+  public class ProjectHasBusinessCapability {
+    /*  */
+    public string ID { get; set; }
 
-		/*  */
-		public string projectID { get; set; }
+    /*  */
+    public string projectID { get; set; }
 
-		/*  */
-		public string businessCapabilityID { get; set; }
+    /*  */
+    public string businessCapabilityID { get; set; }
 
-		/*  */
-		public string comment { get; set; }
+    /*  */
+    public string comment { get; set; }
 
-		/*  */
-		public string supportTypeID { get; set; }
+    /*  */
+    public string supportTypeID { get; set; }
 
-		/*  */
-		public string constraints { get; set; }
+    /*  */
+    public string constraints { get; set; }
 
-		public override string ToString()  {
-			var sb = new StringBuilder();
-			sb.Append("class ProjectHasBusinessCapability {\n");
-			sb.Append("  ID: ").Append(ID).Append("\n");
-			sb.Append("  projectID: ").Append(projectID).Append("\n");
-			sb.Append("  businessCapabilityID: ").Append(businessCapabilityID).Append("\n");
-			sb.Append("  comment: ").Append(comment).Append("\n");
-			sb.Append("  supportTypeID: ").Append(supportTypeID).Append("\n");
-			sb.Append("  constraints: ").Append(constraints).Append("\n");
-			sb.Append("}\n");
-			return sb.ToString();
-		}
-	}
-	}
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class ProjectHasBusinessCapability {\n");
+      sb.Append("  ID: ").Append(ID).Append("\n");
+      sb.Append("  projectID: ").Append(projectID).Append("\n");
+      sb.Append("  businessCapabilityID: ").Append(businessCapabilityID).Append("\n");
+      sb.Append("  comment: ").Append(comment).Append("\n");
+      sb.Append("  supportTypeID: ").Append(supportTypeID).Append("\n");
+      sb.Append("  constraints: ").Append(constraints).Append("\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+  }
+  }
