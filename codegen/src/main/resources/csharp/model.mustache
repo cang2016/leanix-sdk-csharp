@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -29,25 +29,25 @@ using System.Collections.Generic;
 {{#models}}
 {{#model}}
 namespace {{package}} {
-	public class {{classname}} {
-		{{#vars}}
+  public class {{classname}} {
+    {{#vars}}
 
-		{{#description}}/* {{{description}}} */
-		{{/description}}
-		public {{{datatype}}} {{name}} { get; set; }
+    {{#description}}/* {{{description}}} */
+    {{/description}}
+    public {{{datatype}}} {{name}} { get; set; }
 
-		{{/vars}}
+    {{/vars}}
 
-		public override string ToString()  {
-			var sb = new StringBuilder();
-			sb.Append("class {{classname}} {\n");
-			{{#vars}}
-			sb.Append("  {{name}}: ").Append({{name}}).Append("\n");
-			{{/vars}}
-			sb.Append("}\n");
-			return sb.ToString();
-		}
-	}
-	{{/model}}
-	{{/models}}
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class {{classname}} {\n");
+      {{#vars}}
+      sb.Append("  {{name}}: ").Append({{name}}).Append("\n");
+      {{/vars}}
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+  }
+  {{/model}}
+  {{/models}}
 }

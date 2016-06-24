@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="Api\BusinessCapabilitiesApi.cs" />
     <Compile Include="Api\BusinessObjectsApi.cs" />
+    <Compile Include="Api\Common\AccessTokenResponse.cs" />
     <Compile Include="Api\Common\ApiClient.cs" />
+    <Compile Include="Api\Common\ApiClientBuilder.cs" />
     <Compile Include="Api\Common\ApiException.cs" />
     <Compile Include="Api\ConsumersApi.cs" />
     <Compile Include="Api\Models\Activity.cs" />

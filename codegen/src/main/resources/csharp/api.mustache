@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -29,65 +29,65 @@ using LeanIX.Api.Models;
 {{/imports}}
 
 namespace {{package}} {
-	{{#operations}}
-	public class {{classname}} {
-		private readonly ApiClient apiClient = ApiClient.GetInstance();
+  {{#operations}}
+  public class {{classname}} {
+    private readonly ApiClient apiClient = ApiClient.GetInstance();
 
-		public ApiClient getClient() {
-			return apiClient;
-		}
+    public ApiClient getClient() {
+      return apiClient;
+    }
 
-		{{#operation}}
+    {{#operation}}
 
-		/// <summary>
-		/// {{summary}} {{notes}}
-		/// </summary>
-		{{#allParams}}/// <param name="{{paramName}}">{{description}}</param>
-		{{#hasMore}} {{/hasMore}}{{/allParams}}
-		/// <returns></returns>
-		public {{#returnType}}{{{returnType}}} {{/returnType}}{{^returnType}}void {{/returnType}} {{nickname}} ({{#allParams}}{{{dataType}}} {{paramName}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) {
-			// create path and map variables
-			var path = "{{path}}".Replace("{format}","json"){{#pathParams}}.Replace("{" + "{{paramName}}" + "}", apiClient.escapeString({{{paramName}}}.ToString())){{/pathParams}};
+    /// <summary>
+    /// {{summary}} {{notes}}
+    /// </summary>
+    {{#allParams}}/// <param name="{{paramName}}">{{description}}</param>
+    {{#hasMore}} {{/hasMore}}{{/allParams}}
+    /// <returns></returns>
+    public {{#returnType}}{{{returnType}}} {{/returnType}}{{^returnType}}void {{/returnType}} {{nickname}} ({{#allParams}}{{{dataType}}} {{paramName}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) {
+      // create path and map variables
+      var path = "{{path}}".Replace("{format}","json"){{#pathParams}}.Replace("{" + "{{paramName}}" + "}", apiClient.escapeString({{{paramName}}}.ToString())){{/pathParams}};
 
-			// query params
-			var queryParams = new Dictionary<String, String>();
-			var headerParams = new Dictionary<String, String>();
+      // query params
+      var queryParams = new Dictionary<String, String>();
+      var headerParams = new Dictionary<String, String>();
 
-			{{#requiredParamCount}}
-			// verify required params are set
-			if ({{/requiredParamCount}}{{#requiredParams}} {{paramName}} == null {{#hasMore}}|| {{/hasMore}}{{/requiredParams}}{{#requiredParamCount}}) {
-				throw new ApiException(400, "missing required params");
-			}
-			{{/requiredParamCount}}
+      {{#requiredParamCount}}
+      // verify required params are set
+      if ({{/requiredParamCount}}{{#requiredParams}} {{paramName}} == null {{#hasMore}}|| {{/hasMore}}{{/requiredParams}}{{#requiredParamCount}}) {
+        throw new ApiException(400, "missing required params");
+      }
+      {{/requiredParamCount}}
 
-			string paramStr = null;
-			{{#queryParams}}if ({{paramName}} != null){
-				paramStr = ({{paramName}} != null && {{paramName}} is DateTime) ? ((DateTime)(object){{paramName}}).ToString("u") : Convert.ToString({{paramName}});
-				queryParams.Add("{{paramName}}", paramStr);
-			}
-			{{/queryParams}}
+      string paramStr = null;
+      {{#queryParams}}if ({{paramName}} != null){
+        paramStr = ({{paramName}} != null && {{paramName}} is DateTime) ? ((DateTime)(object){{paramName}}).ToString("u") : Convert.ToString({{paramName}});
+        queryParams.Add("{{paramName}}", paramStr);
+      }
+      {{/queryParams}}
 
-			{{#headerParams}}headerParams.Add("{{paramName}}", {{paramName}});
-			{{/headerParams}}
+      {{#headerParams}}headerParams.Add("{{paramName}}", {{paramName}});
+      {{/headerParams}}
 
-			try {
-				var response = apiClient.invokeAPI(path, "{{httpMethod}}", queryParams, {{#bodyParam}}{{bodyParam}}{{/bodyParam}}{{^bodyParam}}null{{/bodyParam}}, headerParams);
-				if(response != null){
-					return {{#returnType}}({{{returnType}}}) ApiClient.deserialize(response, typeof({{{returnType}}})){{/returnType}};
-				}
-				else {
-					return {{#returnType}}null{{/returnType}};
-				}
-			} catch (ApiException ex) {
-				if(ex.ErrorCode == 404) {
-					return {{#returnType}} null{{/returnType}};
-				}
-				else {
-					throw ex;
-				}
-			}
-		}
-		{{/operation}}
-	}
-	{{/operations}}
+      try {
+        var response = apiClient.invokeAPI(path, "{{httpMethod}}", queryParams, {{#bodyParam}}{{bodyParam}}{{/bodyParam}}{{^bodyParam}}null{{/bodyParam}}, headerParams);
+        if(response != null){
+          return {{#returnType}}({{{returnType}}}) ApiClient.deserialize(response, typeof({{{returnType}}})){{/returnType}};
+        }
+        else {
+          return {{#returnType}}null{{/returnType}};
+        }
+      } catch (ApiException ex) {
+        if(ex.ErrorCode == 404) {
+          return {{#returnType}} null{{/returnType}};
+        }
+        else {
+          throw ex;
+        }
+      }
+    }
+    {{/operation}}
+  }
+  {{/operations}}
 }
