@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -27,32 +27,32 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class FactSheetHasChild {
-		/*  */
-		public string ID { get; set; }
+  public class FactSheetHasChild {
+    /*  */
+    public string ID { get; set; }
 
-		/*  */
-		public string factSheetID { get; set; }
+    /*  */
+    public string factSheetID { get; set; }
 
-		/*  */
-		public string factSheetRefID { get; set; }
+    /*  */
+    public string factSheetRefID { get; set; }
 
-		/*  */
-		public string description { get; set; }
+    /*  */
+    public string description { get; set; }
 
-		/*  */
-		public string dependencyTypeID { get; set; }
+    /*  */
+    public string dependencyTypeID { get; set; }
 
-		public override string ToString()  {
-			var sb = new StringBuilder();
-			sb.Append("class FactSheetHasChild {\n");
-			sb.Append("  ID: ").Append(ID).Append("\n");
-			sb.Append("  factSheetID: ").Append(factSheetID).Append("\n");
-			sb.Append("  factSheetRefID: ").Append(factSheetRefID).Append("\n");
-			sb.Append("  description: ").Append(description).Append("\n");
-			sb.Append("  dependencyTypeID: ").Append(dependencyTypeID).Append("\n");
-			sb.Append("}\n");
-			return sb.ToString();
-		}
-	}
-	}
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class FactSheetHasChild {\n");
+      sb.Append("  ID: ").Append(ID).Append("\n");
+      sb.Append("  factSheetID: ").Append(factSheetID).Append("\n");
+      sb.Append("  factSheetRefID: ").Append(factSheetRefID).Append("\n");
+      sb.Append("  description: ").Append(description).Append("\n");
+      sb.Append("  dependencyTypeID: ").Append(dependencyTypeID).Append("\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+  }
+  }

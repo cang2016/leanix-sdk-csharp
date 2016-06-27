@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -24,21 +24,21 @@
 using System;
 
 namespace LeanIX.Api.Common {
-	public class ApiException : Exception {
-		
-		private int errorCode = 0;
+  public class ApiException : Exception {
+    
+    private int errorCode = 0;
 
-		public ApiException() {}
+    public ApiException() {}
 
-		public int ErrorCode { 
-			get
-			{
-				return errorCode;
-			}
-		}
+    public int ErrorCode { 
+      get
+      {
+        return errorCode;
+      }
+    }
 
-		public ApiException(int errorCode, string message) : base(message) {
-			this.errorCode = errorCode;
-		}
-	}
+    public ApiException(int errorCode, string message) : base(message) {
+      this.errorCode = errorCode;
+    }
+  }
 }

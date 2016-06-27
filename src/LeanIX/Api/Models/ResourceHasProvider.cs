@@ -1,7 +1,7 @@
 /*
-* The MIT License (MIT)	 
+* The MIT License (MIT)   
 *
-* Copyright (c) 2015 LeanIX GmbH
+* Copyright (c) 2016 LeanIX GmbH
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy of
 * this software and associated documentation files (the "Software"), to deal in
@@ -27,24 +27,24 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class ResourceHasProvider {
-		/*  */
-		public string ID { get; set; }
+  public class ResourceHasProvider {
+    /*  */
+    public string ID { get; set; }
 
-		/*  */
-		public string providerID { get; set; }
+    /*  */
+    public string providerID { get; set; }
 
-		/*  */
-		public string resourceID { get; set; }
+    /*  */
+    public string resourceID { get; set; }
 
-		public override string ToString()  {
-			var sb = new StringBuilder();
-			sb.Append("class ResourceHasProvider {\n");
-			sb.Append("  ID: ").Append(ID).Append("\n");
-			sb.Append("  providerID: ").Append(providerID).Append("\n");
-			sb.Append("  resourceID: ").Append(resourceID).Append("\n");
-			sb.Append("}\n");
-			return sb.ToString();
-		}
-	}
-	}
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class ResourceHasProvider {\n");
+      sb.Append("  ID: ").Append(ID).Append("\n");
+      sb.Append("  providerID: ").Append(providerID).Append("\n");
+      sb.Append("  resourceID: ").Append(resourceID).Append("\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+  }
+  }
