@@ -34,7 +34,7 @@ In order to use the SDK in your C# application, import the following namespaces:
   using LeanIX.Api.Common;
 ```
 
-You need to instantiate a LeanIX API Client. Here you define the URL to the REST API of your workspace. Please replace `demo` with the name of your workspace. Also here you need to provide the API token.
+You need to instantiate and configure a LeanIX API Client, which is used as a singleton within your project. Here you define the URL to the REST API of your workspace. Please replace `demo` with the name of your workspace. Also here you need to provide the API token.
 
 ```
   ApiClient client = new ApiClientBuilder()
@@ -62,7 +62,7 @@ In order to update the SDK, you need to have java 7 and maven installed, you can
 
 ```
   cd codegen
-  mvn package
+  mvn clean package
 ```
 
 In order to test whether the compilation of the generated sources works, adapt the code in [samples/client/SampleClient/SampleClient.cs](samples/client/SampleClient/SampleClient.cs) to use the correct instance and API Token and run:
